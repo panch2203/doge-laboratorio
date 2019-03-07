@@ -5,13 +5,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  background-image: url(https://files.genial.guru/files/news/part_70/707360/7557910-DdartCTV4AACBu5-1526975516-728-10a8c64154-1527696673.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 code {
@@ -19,12 +13,35 @@ code {
     monospace;
 }
 
-.info{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+#root{
+	height: 100vh;
 }
 
-.para{
+
+.info{
+	background: url(https://files.genial.guru/files/news/part_70/707360/7557910-DdartCTV4AACBu5-1526975516-728-10a8c64154-1527696673.jpg);
+	  height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+}
+
+.top{
 	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	height: 100vh;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.bottom{
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	height: 100vh;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }

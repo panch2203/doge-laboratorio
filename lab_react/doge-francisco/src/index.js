@@ -15,8 +15,8 @@ class DogeMeme extends React.Component {
 	render(){
 		return (
 			<div className="info">
-				<p className="para">MUCH WOW        </p>
-				<p className="para">MUCH FLUFFINESS</p>
+				<p className="top">MUCH WOW        </p>
+				<p className="bottom">MUCH FLUFFINESS</p>
 			</div>
 		);		
 	}

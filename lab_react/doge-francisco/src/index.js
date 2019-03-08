@@ -20,6 +20,7 @@ class DogeMeme extends React.Component {
 
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleChange2 = this.handleChange2.bind(this);
+	    this.resset = this.resset.bind(this);
  	}
 
  	handleChange(event) {
@@ -30,16 +31,23 @@ class DogeMeme extends React.Component {
  		this.setState({botval: event.target.value.toUpperCase()});    	
  	}
 
+ 	resset() {
+ 		this.setState({topval: 'MANY EDITS', botval: 'SO SCARE'});
+ 	}
+
 	render(){
 		return (
 			<div className="info">
-				<form>
-				  <label className="lbl">
-				    Cambio:
-				  </label>
-				    <input type="text" name="topname" onChange={this.handleChange} />
-				    <input type="text" name="bottomname" onChange={this.handleChange2} />				  
-				</form>
+				<div className="rrow">
+					<form>
+					  <label className="lbl">
+					    Cambio:
+					  </label>
+					    <input type="text" name="topname" onChange={this.handleChange} />
+					    <input type="text" name="bottomname" onChange={this.handleChange2} />				   				  
+					</form>
+					<button className="btnres" onClick={this.resset}>RESET</button>
+				</div>
 				<p className="top">{this.state.topval}</p>
 				<p className="bottom">{this.state.botval}</p>
 			</div>

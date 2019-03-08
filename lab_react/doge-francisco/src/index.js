@@ -12,11 +12,36 @@ ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
 
 class DogeMeme extends React.Component {
+
+	constructor(props) {
+	    super(props);
+	    this.state = { topval: 'MUCH WOW',
+		botval: 'MUCH FLUFFINESS'};
+
+	    this.handleChange = this.handleChange.bind(this);
+	    this.handleChange2 = this.handleChange2.bind(this);
+ 	}
+
+ 	handleChange(event) {
+    	this.setState({topval: event.target.value.toUpperCase()});    	
+ 	}
+
+ 	handleChange2(event) {
+ 		this.setState({botval: event.target.value.toUpperCase()});    	
+ 	}
+
 	render(){
 		return (
 			<div className="info">
-				<p className="top">MUCH WOW        </p>
-				<p className="bottom">MUCH FLUFFINESS</p>
+				<form>
+				  <label className="lbl">
+				    Cambio:
+				  </label>
+				    <input type="text" name="topname" onChange={this.handleChange} />
+				    <input type="text" name="bottomname" onChange={this.handleChange2} />				  
+				</form>
+				<p className="top">{this.state.topval}</p>
+				<p className="bottom">{this.state.botval}</p>
 			</div>
 		);		
 	}
